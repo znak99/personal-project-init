@@ -41,11 +41,15 @@ skills/
 3. `skills/new-project/SKILL.md` 상단의 `TEMPLATE_REPO`를 본인 저장소 주소로 바꾼다.
 
 ### 2.2 Claude Code 스킬 설치 (최초 한 번)
+저장소가 Public이므로 로그인 없이 받을 수 있다.
 ```bash
-cp -r skills/new-project ~/.claude/skills/
+git clone --depth 1 https://github.com/znak99/personal-project-init /tmp/ppi
+cp -r /tmp/ppi/skills/new-project ~/.claude/skills/
 ```
+git이 없으면 GitHub 저장소 페이지에서 Code → Download ZIP으로 받아 풀고, `skills/new-project` 폴더만 `~/.claude/skills/`에 복사해도 같다.
+
 Claude Code를 다시 시작하면 `/new-project`로 쓸 수 있고, "새 프로젝트 만들어줘"라고 해도 스킬이 뜬다.
-템플릿을 갱신했을 때 스킬 폴더도 바뀌었으면 다시 복사한다. 복사 대신 심볼릭 링크(`ln -s`)를 걸어 두면 자동으로 따라간다.
+스킬 폴더(`skills/new-project`)를 고쳤을 때는 위 두 줄을 다시 실행하면 된다. 저장소를 로컬에 상시 clone해 두는 경우라면 복사 대신 심볼릭 링크(`ln -s`)를 걸어 두면 자동으로 따라간다.
 
 ### 2.3 새 프로젝트를 만드는 두 가지 방법
 
