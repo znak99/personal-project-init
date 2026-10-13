@@ -8,6 +8,9 @@ description: personal-project-init로 새 토이 프로젝트의 문서 세트�
 템플릿 저장소: `TEMPLATE_REPO=https://github.com/znak99/personal-project-init`
 (스킬을 설치한 뒤 이 줄을 본인 저장소 주소로 바꾼다.)
 
+## 실행 환경
+이 스킬은 로컬 파일 시스템과 git이 필요하므로 **Claude Code에서만** 실행한다. claude.ai 채팅이나 Cowork에서 호출되면 "이 스킬은 Claude Code(데스크톱 앱의 Code 탭 또는 터미널)에서 실행해 주세요"라고 안내하고 멈춘다.
+
 ## 순서
 
 ### 1. 모드 판단
